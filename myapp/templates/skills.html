@@ -1,0 +1,95 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Skills{% endblock title %}
+{% block contents %}
+<section id="skills" class="animate-fade-in-up pt-16 pl-9 pr-9 pb-5 text-white mb-0  bg-gray-900" style="animation-delay: 0.4s; ">
+    <h2 class="text-3xl font-bold mb-8">Skills</h2>
+    <div class="space-y-4">
+        <div>
+            <div class="flex justify-between mb-1">
+                <span>HTML/CSS</span>
+                <span>90%</span>
+            </div>
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-2.5">
+                <div class="bg-indigo-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-between mb-1">
+                <span>Django</span>
+                <span>90%</span>
+            </div>
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-2.5">
+                <div class="bg-indigo-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-between mb-1">
+                <span>Python</span>
+                <span>90%</span>
+            </div>
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-2.5">
+                <div class="bg-indigo-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-between mb-1">
+                <span>JavaScript</span>
+                <span>85%</span>
+            </div>
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-2.5">
+                <div class="bg-indigo-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-between mb-1">
+                <span>MYSQL</span>
+                <span>85%</span>
+            </div>
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-2.5">
+                <div class="bg-indigo-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-between mb-1">
+                <span>Tailwindcss</span>
+                <span>80%</span>
+            </div>
+            <div class="w-full bg-white bg-opacity-20 rounded-full h-2.5">
+                <div class="bg-indigo-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Animate skill bars on scroll
+    function animateSkillBars() {
+        const skillBars = document.querySelectorAll('.skill-bar');
+        skillBars.forEach(bar => {
+            const targetWidth = bar.parentElement.previousElementSibling.lastElementChild.textContent;
+            bar.style.width = targetWidth;
+        });
+    }
+
+    // Trigger skill bar animation when the skills section is in view
+    const skillsSection = document.getElementById('skills');
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateSkillBars();
+            observer.unobserve(skillsSection);
+        }
+    }, { threshold: 0.5 });
+
+    observer.observe(skillsSection);
+</script>
+{% endblock contents %}
