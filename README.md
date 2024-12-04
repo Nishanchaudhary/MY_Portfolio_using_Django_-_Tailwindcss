@@ -1,4 +1,4 @@
-# **My Portfolio using Django and TailwindCSS**
+# **My-Portfolio using Django and TailwindCSS**
 
 Welcome to my portfolio project! This repository contains the source code for a personal portfolio website built using **Django** and **TailwindCSS**. The goal of this project is to showcase my skills, projects, and achievements as a developer.
 
