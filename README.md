@@ -9,11 +9,7 @@ Welcome to my portfolio project! This repository contains the source code for a 
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
 4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Screenshots](#screenshots)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
+5. [Contact](#contact)
 
 ---
 
@@ -45,3 +41,11 @@ This portfolio is designed to be a visually appealing and fully responsive websi
 - Python 3.10+
 - Git installed on your system
 - Node.js and npm for TailwindCSS (optional, for custom builds)
+
+## **Contact**
+
+For any inquiries or feedback, feel free to reach out:
+
+- **Name**: Nishan Kumar Chaudhary
+- **Email**: chaudharynishan314@gmail.com
+- **GitHub**: [Nishanchaudhary](https://github.com/Nishanchaudhary)
